@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email My Order</title>
+    </head>
+    <body>
+        <h2>Here is my order</h2>
+       <p id="Flavour">
+       </p>
+       <p id="type"></p>
+       <script>
+           var query = window.location.search
+           var parser = new URLSearchParams(query)
+           var flavor_tag = document.getElementById("Flavour")
+           flavor_tag.innerHTML = parser.get("Cheese")
+           var type_tag = document.getElementById("type")
+           type_tag.innerHTML = parser.get("type")
+           var Toppings_tag = document.getElementById("Toppings")
+           Toppings_tag.innerHTML = parser.get("Toppings")
+       </script>
+    </body>
+</html>
